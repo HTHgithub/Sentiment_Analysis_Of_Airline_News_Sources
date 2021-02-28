@@ -7,7 +7,7 @@ To try and answer these questions text and sentiment analysis was performed on a
 
 ## Data
 
-<p>The text data for this project was scrpaed from two popular travel websites [The Points Guy](https://thepointsguy.com/) and [One Mile At A Time](https://onemileatatime.com/), with the focus being on three main airlines: American Airlines, Delta, and United. This project was limited to articles dating between January 1st, 2019 and January 31st, 2021. The data chosen to be scraped from each article, if available, was:<br></p>
+<p>The text data for this project was scrpaed from two popular travel websites</p> [The Points Guy](https://thepointsguy.com/)<p> and </p>[One Mile At A Time](https://onemileatatime.com/)<p>, with the focus being on three main airlines: American Airlines, Delta, and United. This project was limited to articles dating between January 1st, 2019 and January 31st, 2021. The data chosen to be scraped from each article, if available, was:<br></p>
 
 - Date the article was published
 - The author of the article

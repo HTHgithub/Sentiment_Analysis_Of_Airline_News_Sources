@@ -1,9 +1,10 @@
 
 ## Sentiment Analysis of Airline News Sources
 
-<p>I work as a developer for a major airline which is currently going through a technology transformation. As part of this transformation, one question that was recently posed was, "How does our technology stack compare to other airlines?" After some discussion it was decided that there was no real way to know. However, in this conversation it was thought that certain airlines had a reputation for being more technologically advanced and reporting more on technology. This got me thinking about how different airlines are reported on and how this reporting impacts public opinion.<br>
+I work as a developer for a major airline which is currently going through a technology transformation. As part of this transformation, one question that was recently posed was, "How does our technology stack compare to other airlines?" After some discussion it was decided that there was no real way to know. However, in this conversation it was thought that certain airlines had a reputation for being more technologically advanced and reporting more on technology. This got me thinking about how different airlines are reported on and how this reporting impacts public opinion.<br>
+<br>
 To try and answer these questions text and sentiment analysis was performed on a couple of popular travel websites that do reporting on major airlines. The goal was to use the written article and any available comments to try and find patterns or differences on how different airlines were reported on, and if this reporting had any impact on public opinion or sentiment.
-</p>
+
 
 ## Data
 
@@ -19,7 +20,7 @@ The text data for this project was scrpaed from two popular travel websites [The
 
 ## Data Collection and Cleaning
 
-<p>The first step of data collection was to create a list of URLs from the two websites </p>
+The first step of data collection was to create a list of URLs from the two websites that were within the date range and written about one of the three chosen airlines.
 
 ## Data Analysis
 

@@ -20,7 +20,13 @@ The text data for this project was scrpaed from two popular travel websites [The
 
 ## Data Collection and Cleaning
 
-The first step of data collection was to create a list of URLs from the two websites that were within the date range and written about one of the three chosen airlines.
+The first step of data collection was to create a list of URL's from the two websites that were within the date range and written about one of the three chosen airlines. This was done manually since it only needed to be done once and automating it would have probably taken more time. The URL's were compiled into two csv's, one for each website. There were 744 article URL's from One Mile At A Time, and 691 from the The Points Guy that fit the criteria, totaling a little under 1500 articles.
+<br>
+<br>
+Python was then used to write webscraping code for each of the two websites. This code took as input the list of URL's then iterated through the list scraping the data mentioned in the above section from each article. This scraped data from each site was then written to a common csv. During the scraping process, punctuation and some whitespace characters were removed from the article content and comments to help with analysis. Once the scraping was completed and the data was compiled into a singular file it was passed into R for further cleaning.
+<br>
+<br>
+One of the bigger challenges was unifying the dates between the two websites as they each used different date formats. To create a single date format all of the dates were first converted to strings. The `str_replace()` function from the *stringr* library was used to replace shortened month names with the full month name (i.e. "jan" to "january").
 
 ## Data Analysis
 

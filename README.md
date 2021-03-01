@@ -30,11 +30,39 @@ One of the bigger challenges was unifying the dates between the two websites as 
 <br>
 <br>
 The article tags was another area where some data clean up was needed. When splitting the data by different airlines the article tags were used decide what airline the article was written about. When first splitting I noticed that American Airlines had much fewer data points than either Delta or United. After looking at different subsets of tags I realized that some articles used "American" to signify American Airlines, while others used "American Airlines". After rerunning the splitting just looking for the "American" tag American Airlines has significantly *more* data points than the other two airlines. Going back to the tags I realized that a common tag was "American Express" since their credit card occasionally offered different rewards for flying on certain airlines there were a decent number of articles written about that. Since there was no comparision of different rewards programs or different credit cards planned, the tag "American Express" was simply removed from all of articles that had it as a tag. This led to a roughly even split of articles between the three airlines.
+<br>
+<br>
+There was a consideration of whether or not to remove stopwords (common English words that do not convey sentiment) from the data before starting analysis. However, after some research into how to perform sentiment analysis in R, it seemed that many of the algorithms either did it automatically, or their libraries came with methods and word lists to simplify this process. For this reason, the decision was made to not clean or remove specific words before the data analysis step.
 
 ## Data Analysis
 
+The main focus of the data analysis for this project was to gauge the sentiment of news articles written about different airlines, and the comments that were written on the articles. Once the sentiment of each article and comment section was known comparisons were made to try and find patterns or trends of sentiment scores between different airlines. 
+<br>
+<br>
+Sentiment analysis is a broad field and there are many different types of analysis. At a general level different sentiment analysis algorithms use different lexicons, or lists of words, that have been assigned a sentiment score or emotion. The algorithm then iterates through a text document and looks up the document words in the lexicon and scores them. These scores can then be used or aggregated to look at the sentiment of different sentences, passages, or documents. Some algorithms use a binary classification of either positive or negative sentiment, some assign sentiment on a scale, and some assign specific emotions to words such as excitment, anticipation, or sadness rather than just positive or negative sentiment.
+<br>
+<br>
+Two different types of sentiment analysis were chosen for this project depending on what was being scored. For the news articles a binary sentiment classification was chosen, specifically the Bing method. Since the articles primarily had one author it was figured that the author's tone and writing style would most likely not change throughout the article. It was thought that a binary classification of sentiment words in the article would reduce the chance that scores would be skewed if an author frequently used a word or words that were towards the extremes of a sliding scale.
+<br>
+<br>
+When scoring the article comments a sliding scale of sentiment was used opposed to a binary classification. When scraping the data all of the comments were grouped and stored together in one string or document. It was thought that using a sliding sentiment scale would allow for a more accurate representation of overall sentiment between different people's comments.
+<br>
+<br>
+The sentiment analysis was done in R using the *syuzhet* library. This library provided the ability to perform the different types of sentiment analysis that were chosen for this project. The main steps for the initial analysis are as follows:
+
+1. Read the raw csv of scraped data into R
+2. Convert data to their respective types
+3. Clean the data and split based on different conditions such as website, airline, and topic
+4. Use the *syuzhet* package to perform sentiment analysis of the scrapred articles and comment sections
+5. Use the results to create visualizations and look for trends and differences in airline reporting
+
 ## Results
 
+- Appears to be little to no correlation or pattern
+- Find some interesting stats (number of articles reporting on tech per airline, etc)
+
 ## Conclusion and Future Work
+
+- 
 
 ## References

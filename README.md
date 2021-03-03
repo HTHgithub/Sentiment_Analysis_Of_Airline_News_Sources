@@ -56,7 +56,7 @@ The sentiment analysis was done in R using the *syuzhet* library. This library p
 4. Use the *syuzhet* package to perform sentiment analysis of the scrapred articles and comment sections
 5. Use the results to compare and contrast the sentiment of or resulting in reporting of different airlines
 <br>
-When comparing the sentiment scores there were three main aspects that were looked at. Was there a difference in article sentiment between airlines? Was there a difference in comment sentiment between airlines? And, was there any difference in sentiment score between the two websites that I looked at? Once the sentiment scores were calculated they were analyzed using appropriate statistical tests to look for significant differences between groups.
+When comparing the sentiment scores there were two main aspects that were looked at. Was there a difference in article sentiment between airlines, and was there a difference in comment sentiment between airlines? Once the sentiment scores were calculated they were analyzed using appropriate statistical tests to look for significant differences between groups.
 
 ## Results
 
@@ -96,16 +96,34 @@ quickplot(afinn_vector[united_o], xlab = "Sentiment Score", ylab="Count", main="
 
 ![United Comment Sentiment](./images/united_comments.png)
 
-The plots above showed that the sentiment scores between airlines were fairly close but still showed some differences. To test if they were statistically significant some basic t-tests and Wilcox Mann tests were run to test for significant difference of means. 
+The plots above showed that the sentiment scores between airlines were fairly close but still showed some differences. 
+
+![Airline Article Sentiment Mean Comparison](./images/mean_sentiment_articles.png)
+
+![Airline Comment Sentiment Mean Comparison](./images/mean_sentiment_comments.png)
+
+To test if these differences were statistically significant some basic t-tests and Wilcox Mann tests were run to test for significant difference of means. 
 
 ![Airline Sentiment Significance Comparison](./images/sig_tests_articles.png)
 
 ![Airline Sentiment Significance Comparison](./images/sig_tests_comments.png)
 
+These tests showed that there was not a significant difference between the American Airlines and United Airlines scores for both the article and comments sentiment. However, both of the Delta Airline sentiment scores were significantly higher than the  corresponding American and United scores.
+
 ## Conclusion 
+
+
 
 ## Future Work
 
-- Change scraper to see if different people had different sentiments about airlines
+To build off of what this project started there are some future work items that could be explored. This includes refining the sentiment analysis algorithm or technique to get more sophisticated scores. This could be done through the use of machine learning or through the creation of a custom algorithm or lexicon. Another experiment could be to collect socia media data about the different airlines and use that data for sentiment analysis. 
+
+One of major things that was planned to be looked at given the time was whether or not the sentiment scores had any implication on the stock price of the airline. This analysis was started but given the unfamiliarity of time series analysis it was not able to be finished. The primary data seemed to imply that there was some sort of relationship between the two.
+
+![AA Stock Vs Sentiment](./images/Stock_aa.png)
+
+![Delta Stock Vs Sentiment](./images/Stock_delta.png)
+
+![United Stock Vs Sentiment](./images/Stock_united.png)
 
 ## References

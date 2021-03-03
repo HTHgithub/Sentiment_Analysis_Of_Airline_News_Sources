@@ -80,6 +80,10 @@ quickplot(bing_vector[united], xlab = "Sentiment Score", ylab="Count", main="Uni
 
 ![American Article Sentiment](./images/aa_article.png)
 
+![Delta Article Sentiment](./images/delta_article.png)
+
+![United Article Sentiment](./images/united_article.png)
+
 ## Conclusion 
 
 ## Future Work

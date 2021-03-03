@@ -49,20 +49,39 @@ When scoring the article comments a sliding scale of sentiment was used opposed 
 <br>
 <br>
 The sentiment analysis was done in R using the *syuzhet* library. This library provided the ability to perform the different types of sentiment analysis that were chosen for this project. The main steps for the initial analysis are as follows:
+<br>
+<br>
 
 1. Read the raw csv of scraped data into R
 2. Convert data to their respective types
 3. Clean the data and split based on different conditions such as website, airline, and topic
 4. Use the *syuzhet* package to perform sentiment analysis of the scrapred articles and comment sections
-5. Use the results to create visualizations and look for trends and differences in airline reporting
+5. Use the results to compare and contrast the sentiment of or resulting in reporting of different airlines
+<br>
+<br>
+When comparing the sentiment scores there were three main aspects that were looked at. Was there a difference in article sentiment between airlines? Was there a difference in comment sentiment between airlines? And, was there any difference in sentiment score between the two websites that I looked at? Once the sentiment scores were calculated they were analyzed using appropriate statistical tests to look for significant differences between groups.
 
 ## Results
 
-- Appears to be little to no correlation or pattern
-- Find some interesting stats (number of articles reporting on tech per airline, etc)
+To start off the distributions of the sentiment for both the articles and comments were calculated and the distributions were plotted split by airline.
 
-## Conclusion and Future Work
+```
+# Creating a vector of sentiment scores from the article content using the "Bing" Method
+bing_vector = get_sentiment(dat$article_content, method = "bing")
 
-- 
+# Creating a vector of sentiment scores from the article comments using the "afinn" Method
+afinn_vector = get_sentiment(ommat_all$article_comments, method = "afinn")
+
+# plotting article sentiment by airline
+quickplot(bing_vector[aa], xlab = "Sentiment Score", ylab="Count", main="American Airlines Article Sentiment Score")
+quickplot(bing_vector[delta], xlab = "Sentiment Score", ylab="Count", main="Delta Airlines Article Sentiment Score")
+quickplot(bing_vector[united], xlab = "Sentiment Score", ylab="Count", main="United Airlines Article Sentiment Score")
+```
+
+![American Article Sentiment](./images/aa_article.png)
+
+## Conclusion 
+
+## Future Work
 
 ## References

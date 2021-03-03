@@ -126,4 +126,6 @@ One of major things that was planned to be looked at given the time was whether 
 
 ![United Stock Vs Sentiment](./images/Stock_united.png)
 
+Unfortunately, without further analysis it is hard to say what kind of relationship exists between the two. This relationship can be explored with time series analysis and cross correlation analysis but due to time constraints it was not performed. This analysis will most likely be done in the near future.
+
 ## References

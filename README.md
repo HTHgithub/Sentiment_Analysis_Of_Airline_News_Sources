@@ -81,6 +81,8 @@ quickplot(bing_vector[united], xlab = "Sentiment Score", ylab="Count", main="Uni
 
 ![United Article Sentiment](./images/united_article.png)
 
+![United Article Sentiment](./images/All_sent_article.png)
+
 Then the comment sentiment was plotted:
 
 ```
@@ -95,6 +97,8 @@ quickplot(afinn_vector[united_o], xlab = "Sentiment Score", ylab="Count", main="
 ![Delta Comment Sentiment](./images/delta_comments.png)
 
 ![United Comment Sentiment](./images/united_comments.png)
+
+![All Comment Sentiment](./images/All_sentiment.png)
 
 The plots above showed that the sentiment scores between airlines were fairly close but still showed some differences. 
 

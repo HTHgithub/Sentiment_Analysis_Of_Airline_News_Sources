@@ -84,8 +84,26 @@ quickplot(bing_vector[united], xlab = "Sentiment Score", ylab="Count", main="Uni
 
 ![United Article Sentiment](./images/united_article.png)
 
+Then the comment sentiment was plotted:
+
+```
+# plotting comment sentiment by airline
+quickplot(afinn_vector[aa_o], xlab = "Sentiment Score", ylab="Count", main="American Airlines Comment Sentiment Score")
+quickplot(afinn_vector[delta_o], xlab = "Sentiment Score", ylab="Count", main="Delta Airlines Comment Sentiment Score")
+quickplot(afinn_vector[united_o], xlab = "Sentiment Score", ylab="Count", main="United Airlines Comment Sentiment Score")
+```
+
+![American Comment Sentiment](./images/aa_comments.png)
+
+![Delta Comment Sentiment](./images/delta_comments.png)
+
+![United Comment Sentiment](./images/united_comments.png)
+
+
 ## Conclusion 
 
 ## Future Work
+
+- Change scraper to see if different people had different sentiments about airlines
 
 ## References

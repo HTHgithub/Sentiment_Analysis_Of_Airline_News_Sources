@@ -114,10 +114,6 @@ To test if these differences were statistically significant some basic t-tests a
 
 These tests showed that there was not a significant difference between the American Airlines and United Airlines scores for both the article and comments sentiment. However, both of the Delta Airline sentiment scores were significantly higher than the  corresponding American and United scores.
 
-## Conclusion 
-
-
-
 ## Future Work
 
 To build off of what this project started there are some future work items that could be explored. This includes refining the sentiment analysis algorithm or technique to get more sophisticated scores. This could be done through the use of machine learning or through the creation of a custom algorithm or lexicon. Another experiment could be to collect socia media data about the different airlines and use that data for sentiment analysis. 

@@ -50,14 +50,11 @@ When scoring the article comments a sliding scale of sentiment was used opposed 
 <br>
 The sentiment analysis was done in R using the *syuzhet* library. This library provided the ability to perform the different types of sentiment analysis that were chosen for this project. The main steps for the initial analysis are as follows:
 <br>
-<br>
-
 1. Read the raw csv of scraped data into R
 2. Convert data to their respective types
 3. Clean the data and split based on different conditions such as website, airline, and topic
 4. Use the *syuzhet* package to perform sentiment analysis of the scrapred articles and comment sections
 5. Use the results to compare and contrast the sentiment of or resulting in reporting of different airlines
-<br>
 <br>
 When comparing the sentiment scores there were three main aspects that were looked at. Was there a difference in article sentiment between airlines? Was there a difference in comment sentiment between airlines? And, was there any difference in sentiment score between the two websites that I looked at? Once the sentiment scores were calculated they were analyzed using appropriate statistical tests to look for significant differences between groups.
 
@@ -99,6 +96,11 @@ quickplot(afinn_vector[united_o], xlab = "Sentiment Score", ylab="Count", main="
 
 ![United Comment Sentiment](./images/united_comments.png)
 
+The plots above showed that the sentiment scores between airlines were fairly close but still showed some differences. To test if they were statistically significant some basic t-tests and Wilcox Mann tests were run to test for significant difference of means. 
+
+![Airline Sentiment Significance Comparison](./images/sig_tests_articles.png)
+
+![Airline Sentiment Significance Comparison](./images/sig_tests_comments.png)
 
 ## Conclusion 
 
